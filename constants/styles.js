@@ -12,5 +12,6 @@ export const GlobalStyles = {
     champagnePink: "#F5E4D7",
     persianPink: "#F991CC",
     plumWeb: "#E2AFDE",
+    black: "black",
   },
 };
