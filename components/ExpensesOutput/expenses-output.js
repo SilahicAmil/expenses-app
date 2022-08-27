@@ -14,25 +14,25 @@ const DUMMY_EXPENSES = [
   {
     id: "e2",
     description: "jeans",
-    amount: 420.69,
+    amount: 42.69,
     date: new Date("2022-01-22"),
   },
   {
     id: "e3",
     description: "some bananas",
-    amount: 1337.69,
+    amount: 13.69,
     date: new Date("2021-03-02"),
   },
   {
     id: "e4",
     description: "ur mom lol",
-    amount: 1.69,
+    amount: 12.69,
     date: new Date("2021-05-02"),
   },
   {
     id: "e5",
     description: "ur dad lol",
-    amount: 6969.69,
+    amount: 72.69,
     date: new Date("2022-05-02"),
   },
 ];
@@ -50,7 +50,10 @@ export default ExpensesOutput;
 
 const styles = StyleSheet.create({
   rootContainer: {
-    padding: 24,
+    flex: 1,
+    paddingHorizontal: 24,
+    paddingTop: 24,
+    paddingBottom: 0,
     backgroundColor: "white",
   },
 });
