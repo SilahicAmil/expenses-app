@@ -25,13 +25,20 @@ const styles = StyleSheet.create({
     padding: 8,
     backgroundColor: GlobalStyles.color.tealBlue,
     borderRadius: 6,
+    elevation: 3,
+    shadowColor: GlobalStyles.color.Ming,
+    shadowRadius: 4,
+    shadowOffset: { width: 1, height: 1 },
+    shadowOpacity: 0.66,
   },
   period: {
-    fontSize: 12,
-    color: GlobalStyles.color.black,
+    fontSize: 14,
+    color: "white",
+    fontWeight: "bold",
   },
   sum: {
     fontSize: 16,
-    color: GlobalStyles.color.black,
+    color: "white",
+    fontWeight: "bold",
   },
 });

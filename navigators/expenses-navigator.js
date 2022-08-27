@@ -1,4 +1,5 @@
 import ExpensesOverview from "../navigators/bottom-tabs-navigator";
+import { GlobalStyles } from "../constants/styles";
 import ManageExpense from "../screens/manage-expense-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
@@ -9,9 +10,16 @@ const Stack = createNativeStackNavigator();
 const ExpensesNavigator = () => {
   return (
     <>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="ExpensesOverview">
+        <Stack.Navigator
+          initialRouteName="ExpensesOverview"
+          screenOptions={{
+            headerBackTitle: "Back",
+            headerStyle: { backgroundColor: GlobalStyles.color.blueNCS },
+            headerTintColor: "white",
+          }}
+        >
           <Stack.Screen
             name="ExpensesOverview"
             component={ExpensesOverview}
@@ -19,7 +27,13 @@ const ExpensesNavigator = () => {
               headerShown: false,
             }}
           />
-          <Stack.Screen name="ManageExpense" component={ManageExpense} />
+          <Stack.Screen
+            name="ManageExpense"
+            component={ManageExpense}
+            options={{
+              presentation: "modal",
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
