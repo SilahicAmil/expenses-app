@@ -3,8 +3,13 @@ import { StyleSheet, Text, View } from "react-native";
 import { GlobalStyles } from "../../constants/styles";
 
 const ExpensesSummary = ({ periodName, expenses }) => {
+  // takes the sum and expense
   const expensesSum = expenses.reduce((sum, expense) => {
+    // then returns the sum plus the expense amount
+    // since sum is initially 0 we add whatever the expense amount is to it
+    // Ex: 0 + 69 (lol) and returns the total
     return sum + expense.amount;
+    // 0 is initial state of sum
   }, 0);
 
   return (

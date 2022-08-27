@@ -6,8 +6,11 @@ import { useNavigation } from "@react-navigation/native";
 
 const ExpenseItem = ({ description, date, amount, id }) => {
   const navigation = useNavigation();
+
   const expensePressedHandler = () => {
+    // connects to manage expense screen and renders if an exisitng expense was pressed
     navigation.navigate("ManageExpense", {
+      // we use expenseId in manage expense to get the ID with the route.params thingy
       expenseId: id,
     });
   };
